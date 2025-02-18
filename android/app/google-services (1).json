@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "572383202862",
+    "project_id": "idn-attendence-app",
+    "storage_bucket": "idn-attendence-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572383202862:android:30733bd3c5ac1f664059bf",
+        "android_client_info": {
+          "package_name": "com.example.attendence_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXv853Mgw84D7KKffEXrpqpMUAZ5tS5BY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
