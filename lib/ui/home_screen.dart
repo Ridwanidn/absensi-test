@@ -1,3 +1,4 @@
+import 'package:attendence_app/ui/absent/absent_screen.dart';
 import 'package:attendence_app/ui/attend/attend_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -70,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const AttendScreen()));
+                              builder: (context) => const AbsentScreen()));
                     },
                     child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
