@@ -1,5 +1,8 @@
 import 'package:attendence_app/ui/absent/absent_screen.dart';
 import 'package:attendence_app/ui/attend/attend_screen.dart';
+import 'package:attendence_app/ui/attendance_history/attendance_history_screen.dart';
+import 'package:attendence_app/ui/new_history/new_history.dart';
+import 'package:attendence_app/ui/newfitur/new_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -34,15 +37,9 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               children: [
                 Expanded(
-                  // efect when click
                   child: InkWell(
-                    highlightColor: Colors.transparent,
-                    splashColor: Colors.transparent,
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const AttendScreen()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const AttendScreen()));
                     },
                     child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -54,10 +51,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                         Text(
                           "Attendance Record",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
@@ -65,13 +59,8 @@ class HomeScreen extends StatelessWidget {
                 ),
                 Expanded(
                   child: InkWell(
-                    highlightColor: Colors.transparent,
-                    splashColor: Colors.transparent,
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const AbsentScreen()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const AbsentScreen()));
                     },
                     child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -83,10 +72,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                         Text(
                           "Permission",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
@@ -94,13 +80,8 @@ class HomeScreen extends StatelessWidget {
                 ),
                 Expanded(
                   child: InkWell(
-                    highlightColor: Colors.transparent,
-                    splashColor: Colors.transparent,
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const AttendScreen()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const AttendanceHistoryScreen()));
                     },
                     child: const Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -112,10 +93,50 @@ class HomeScreen extends StatelessWidget {
                         ),
                         Text(
                           "Attendance History",
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                // Tombol Baru
+                Expanded(
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => AddShiftPage()));
+                    },
+                    child: const Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image(
+                          image: AssetImage('assets/images/Add_shift-kerja.png'), // Ganti dengan ikon yang sesuai
+                          height: 100,
+                          width: 100,
+                        ),
+                        Text(
+                          "Add Shift",
+                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => ShiftHistoryPage()));
+                    },
+                    child: const Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image(
+                          image: AssetImage('assets/images/history_shift.png'), // Ganti dengan ikon yang sesuai
+                          height: 100,
+                          width: 100,
+                        ),
+                        Text(
+                          "History Shift",
+                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
@@ -134,11 +155,7 @@ class HomeScreen extends StatelessWidget {
                 centerTitle: true,
                 title: const Text(
                   "IDN Boarding School Solo",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
                 ),
               ),
             ),
